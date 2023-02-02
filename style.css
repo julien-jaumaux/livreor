@@ -1,5 +1,5 @@
 body{
-    background-image: url("images/connexion.jpg");
+   background-image: url("images/bamboo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -112,3 +112,79 @@ input[type=submit]:hover {
 .tableau> th, tr{
     background-color: rgb(0, 255, 34);
 }
+/*--------------nav-----------*/
+
+button{
+    border-radius: 15%;
+}
+a:link, a:visited {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: rgb(47, 221, 47);
+    color: white;
+    border-radius: 15%;
+}
+
+
+
+
+/**,*::before,*::after{box-sizing: border-box;}*/
+
+.effet-3d {
+margin: 2rem auto;
+display: flex;
+justify-content: center;
+font-family: 'Exo';
+color: #34c72f;
+font-size: calc(50vw / 5);
+letter-spacing: .015em;
+text-shadow: 0 0 0 #ffffff93,
+.0025em .0025em 0 #ffffff93,
+.005em .005em 0 #ffffff93,
+.0075em .0075em 0 #ffffff93,
+.01em .01em 0 #ffffff93,
+.0125em .0125em 0 #ffffff93,
+.015em .015em 0 #ffffff93,
+.0175em .0175em 0 #ffffff93,
+.02em .02em 0 #ffffff93,
+.0225em .0225em 0 #ffffff93,
+.025em .025em 0 #ffffff93,
+.0275em .0275em 0 #ffffff93,
+.03em .03em 0 #ffffff93,
+.0325em .0325em 0 #ffffff93,
+.035em .035em 0 #ffffff93,
+.0375em .0375em 0 #ffffff93,
+.04em .04em 0 #ffffff93,
+.0425em .0425em 0 #ffffff93, 
+.045em .045em 0 #ffffff93,
+.0475em .0475em 0 #ffffff93,
+.05em .05em 0 #ffffff93,
+.0525em .0525em 0 #ffffff93,
+.055em .055em 0 #ffffff93,
+.0575em .0575em 0 #ffffff93,
+.06em .06em 0 #ffffff93,
+.0625em .0625em 0 #ffffff93,
+.065em .065em 0 #ffffff93,
+.0675em .0675em 0 #ffffff93, 
+.07em .07em 0 #ffffff93,
+.0725em .0725em 0 #ffffff93,
+.075em .075em 0 #ffffff93,
+.0775em .0775em 0 #ffffff93,
+.08em .08em 0 #ffffff93,
+.0825em .0825em 0 #ffffff93,
+.085em .085em 0 #ffffff93,
+.0875em .0875em 0 #ffffff93,
+.09em .09em 0 #ffffff93,
+.0925em .0925em 0 #ffffff93,
+.095em .095em 0 #ffffff93,
+.0975em .0975em 0 #ffffff93,
+.1em .1em 0 #ffffff93
+	
+	}

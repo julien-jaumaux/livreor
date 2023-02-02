@@ -1,10 +1,6 @@
 <?php
-session_start();
-$mysqli = new mysqli("localhost", "root", "", "livreor");
-if ($mysqli -> connect_errno){
-    echo "failed to connect to my MySQL" .$mysqli -> connect_error; 
-    exit();
-}
+include_once("include/bdd.php");
+
 if(isset($_POST['submit'])){
 
     if($_POST['password'] != $_POST['confirm_password']){
@@ -41,13 +37,9 @@ if(isset($_POST['submit'])){
     <title>Inscription</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="connexion.php">Se connecter</a></li>
-            <li><a href="inscription.php">Créer un compte</a></li>     
-        </ul>
-    </nav>
+
+    <?php include_once("include/header.php"); ?>
+
     <div id="container">
     <!-- zone de connexion -->
     

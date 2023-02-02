@@ -1,11 +1,6 @@
 <?php
-session_start();
+include_once("include/bdd.php");
 
-$mysqli = new mysqli("localhost", "root", "", "livreor");
-if ($mysqli -> connect_errno){
-    echo "failed to connect to my MySQL" .$mysqli -> connect_error; 
-    exit();
-}
 //-----------verification 
 if(!empty($_POST['login']) && !empty($_POST['password'])){
     $login = mysqli_real_escape_string($mysqli,htmlspecialchars($_POST['login'])); 
@@ -38,13 +33,9 @@ if(!empty($_POST['login']) && !empty($_POST['password'])){
     <title>Connexion</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="connexion.php">Se connecter</a></li>
-            <li><a href="inscription.php">Créer un compte</a></li>     
-        </ul>
-    </nav>
+
+    <?php include_once("include/header.php"); ?>
+
     <div id="container">
     <!-- zone de connexion -->
     

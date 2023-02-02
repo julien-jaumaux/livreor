@@ -1,11 +1,5 @@
 <?php
-session_start();
-$mysqli = new mysqli("localhost", "root", "", "livreor");
-if ($mysqli -> connect_errno){
-    echo "failed to connect to my MySQL" .$mysqli -> connect_error; 
-    exit();
-}
-
+include_once("include/bdd.php");
 ?>
 
 <hr>
@@ -20,14 +14,8 @@ if ($mysqli -> connect_errno){
     <title>Page commentaires</title>
 </head>
 <body>
-<nav>
-        <ul>
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="livre-or.php">Livre d'or</a></li>
-            <li><a href="profil.php">Modifier son profil</a></li>
-            <li><a href="./logout.php">Se déconnecter</a></li>    
-        </ul>
-    </nav>
+
+    <?php include_once("include/header.php"); ?>
 
     <div class="commentaire">
 

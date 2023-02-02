@@ -1,10 +1,5 @@
 <?php
-session_start();
-$mysqli = new mysqli("localhost", "root", "", "livreor");
-if ($mysqli -> connect_errno){
-    echo "failed to connect to my MySQL" .$mysqli -> connect_error; 
-    exit();
-}
+include_once("include/bdd.php");
 
 $requete = $mysqli->query("SELECT * FROM utilisateurs");
 
@@ -38,12 +33,9 @@ if(isset($_POST['submit'])){
     <title>Page profil</title>
 </head>
 <body>
-<nav>
-        <ul>
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="./logout.php">Se déconnecter</a></li>
-        </ul>
-    </nav>
+
+    <?php include_once ("include/header.php");?>
+
     <div id="container">
     <!-- zone de connexion -->
     

@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php 
+include_once("include/bdd.php");
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,14 +11,14 @@
     <title>Accueil</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="connexion.php">Se connecter</a></li>
-            <li><a href="inscription.php">Créer un compte</a></li>     
-        </ul>
-    </nav>
-    <h1>J&J VPN</h1>
+
+    <?php include_once("include/header.php"); ?>  
+
+    
+
+<div class=effet-3d>GREEN UP</div>
+
+
 
 </body>
 </html>
