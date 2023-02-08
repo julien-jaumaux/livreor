@@ -1,6 +1,8 @@
 <?php
 include_once("include/bdd.php");
 
+
+
 //-----------verification 
 if(!empty($_POST['login']) && !empty($_POST['password'])){
     $login = mysqli_real_escape_string($mysqli,htmlspecialchars($_POST['login'])); 
@@ -14,6 +16,7 @@ if(!empty($_POST['login']) && !empty($_POST['password'])){
             $_SESSION['id'] = $resultat['id'];
 
             if($_POST['login'] == $resultat['login'] && $_POST['password'] == $resultat['password']){
+
                 header('Location: livre-or.php');
             }
         }

@@ -1,32 +1,3 @@
-<?php
-include_once("include/bdd.php");
-
-if(isset($_POST['submit'])){
-
-    if($_POST['password'] != $_POST['confirm_password']){
-        echo "Veuillez choisir deux password identiques";
-    
-
-    }
-    elseif(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['login']) && !empty($_POST['password'])){
-
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $login = $_POST['login'];
-    $password = $_POST['password'];
-    $request = $mysqli->query("INSERT INTO utilisateurs(nom,prenom,login,password) VALUES('$nom', '$prenom', '$login', '$password')");
-    }
-
-
-    header('location: connexion.php');
-
-}
-
-
-    
-
-
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -56,6 +27,28 @@ if(isset($_POST['submit'])){
 
     </form>
     </div>
+
+    <?php
+include_once("include/bdd.php");
+
+if(isset($_POST['submit'])){
+
+    if($_POST['password'] != $_POST['confirm_password']){
+        echo "<p>Veuillez choisir deux password identiques!</p>";
+       
+    }
+    
+    elseif(!empty($_POST['login']) && !empty($_POST['password'])){
+    $login = $_POST['login'];
+    $password = $_POST['password'];
+    $request = $mysqli->query("INSERT INTO utilisateurs(login,password) VALUES('$login', '$password')");
+     header('location: connexion.php');
+    }
+
+}
+
+
+?>
 
 <?php
 session_destroy();

@@ -15,6 +15,7 @@ include_once("include/bdd.php");
     <title>Livre d'or</title>
 </head>
 <body>
+
 <?php include_once("include/header.php"); ?>
 
 
@@ -28,8 +29,13 @@ include_once("include/bdd.php");
     <br>
     <div class = "tableau">
     <?php
+        if(isset($_SESSION['login'])){?>
+        <p>Bienvenue &nbsp; <?php echo $_SESSION['login'];}?></p>
+        
+        <?php
+
+
         echo "<table border='5' solid green ><tr>";
-    
     
         foreach ($results as $key => $value)
             {
@@ -49,6 +55,6 @@ include_once("include/bdd.php");
         echo "</table>";
     ?>
     </div>
-
+   
 </body>
 </html>

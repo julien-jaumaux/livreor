@@ -11,6 +11,10 @@ H1{
     color: rgb(9, 255, 0);
     margin-top: 15%;
 }
+p{
+    color: #000000;
+    font-size: xx-large;
+}
 /*--------naviguation accueil------------*/
 
 ul {
