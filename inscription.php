@@ -34,7 +34,7 @@ include_once("include/bdd.php");
 if(isset($_POST['submit'])){
 
     if($_POST['password'] != $_POST['confirm_password']){
-        echo "<p style='color:white;'>Veuillez choisir deux password identiques!</p>";
+        echo "<p style='color:white;text-align:center;'>Veuillez choisir deux password identiques!</p>";
        
     }
     
