@@ -30,7 +30,7 @@ include_once("include/bdd.php");
     <div class = "tableau">
     <?php
         if(isset($_SESSION['login'])){?>
-        <p>Bienvenue &nbsp; <?php echo $_SESSION['login'];}?></p>
+        <p><b>Bienvenue &nbsp; <?php echo $_SESSION['login'];}?></b></p>
         
         <?php
 
