@@ -1,14 +1,13 @@
 <?php
 include_once("include/bdd.php");
 
-
-
 //-----------verification 
 if(!empty($_POST['login']) && !empty($_POST['password'])){
     $login = mysqli_real_escape_string($mysqli,htmlspecialchars($_POST['login'])); 
     $password = mysqli_real_escape_string($mysqli,htmlspecialchars($_POST['password']));
     $requete = $mysqli->query("SELECT * FROM utilisateurs");
     while($resultat = $requete->fetch_assoc()){
+        
 
         if($resultat['login'] == $login && $resultat['password'] == $password){
             $_SESSION['login'] = $resultat['login'];
@@ -24,6 +23,7 @@ if(!empty($_POST['login']) && !empty($_POST['password'])){
     }
 
 }
+
 ?>
 
 <!DOCTYPE html>
