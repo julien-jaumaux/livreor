@@ -1,6 +1,8 @@
 <?php
 include_once("include/bdd.php");
 
+
+
 //-----------verification 
 if(!empty($_POST['login']) && !empty($_POST['password'])){
     $login = mysqli_real_escape_string($mysqli,htmlspecialchars($_POST['login'])); 
